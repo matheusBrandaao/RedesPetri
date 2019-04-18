@@ -2,8 +2,9 @@ public class Arco {
 
     private int peso;
     private boolean val_arco = false;
+    private boolean tipo_arco = true; //arco entrada = true. Arco saida = false
 
-    public Arco(int peso) {
+    public Arco(int peso, boolean tipo_arco) {
         if (peso < 0) {
             System.out.println("VALOR INVALIDO!");
         }
@@ -12,6 +13,7 @@ public class Arco {
         } else {
             this.peso = peso;
         }
+        this.tipo_arco = tipo_arco;
     }
 
     public int getPesoArco() {
@@ -28,6 +30,10 @@ public class Arco {
         }
 
         return val_arco;
+    }
+    
+    public boolean getTipo(){
+        return tipo_arco;
     }
 
 }

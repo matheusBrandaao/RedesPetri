@@ -18,6 +18,10 @@ public class Lugar {
     public int getId() {
         return id;
     }
+    
+    public void setMarca(int marca){
+        this.marca = marca;
+    }
 
     public int getMarca() {
         return marca;
