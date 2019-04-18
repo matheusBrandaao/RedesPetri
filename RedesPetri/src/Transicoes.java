@@ -12,14 +12,15 @@ public class Transicoes {
         this.lugares = lugares;
         this.arco = arco;
     }
-    
-    //AJUSTAR POIS ESTÁ HABILITANDO A TRANSICAO APENAS COM A ATIVACAO DE UM LUGAR/ARCO
+    //VERIFICA SE A TRANSICAO ESTÁ HABILITADA E CONSOME A MARCA DO LUGAR
     public void alt_trans() {
         boolean aux = false;
-        for (int i = 0; i < lugares.size(); i++) {
+        int i;
+        for (i = 0; i < lugares.size(); i++) {
             arco.add(lugares.get(i).getArco());
             aux = arco.get(i).validaArco(lugares.get(i));
-            //aux = lugares.get(i).validaArco(lugares.get(i).getArco());        
+            //aux = lugares.get(i).validaArco(lugares.get(i).getArco());   
+        }
             if (aux == true) {
                 transHab = true;
                 lugares.get(i).consome();
@@ -28,7 +29,7 @@ public class Transicoes {
                 System.out.println("TRANSIÇÃO NÃO HABILITADA!");
             }
         }
-    }
+    
 
     public void sorteio() {
         // sorteio da marca entre transições 

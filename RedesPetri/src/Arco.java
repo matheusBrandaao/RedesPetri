@@ -23,7 +23,8 @@ public class Arco {
         if (marca >= peso) {
             val_arco = true;
         } else {
-            System.out.println("TRANSIÇÃO NÃO ATIVADA!");
+          //System.out.println("TRANSIÇÃO NÃO ATIVADA!");
+          return val_arco;
         }
 
         return val_arco;

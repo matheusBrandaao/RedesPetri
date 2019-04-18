@@ -5,25 +5,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Teste {
-
-    private ArrayList<Lugar> lugares = new ArrayList<>();
-    private ArrayList<Transicoes> trans = new ArrayList<>();
-
-    public void leitura_iterativa() {
-
-    }
-
-    public void leitura_arquivo() {
-
-    }
-
     public static void main(String[] args) {
 
         Arco a1 = new Arco(1);
         Arco a2 = new Arco(3);
 
         Lugar l1 = new Lugar(1, 1, a1);
-        Lugar l2 = new Lugar(2, 3, a2);
+        Lugar l2 = new Lugar(2, 2, a2);
 
         ArrayList<Lugar> l = new ArrayList<>();
         ArrayList<Arco> a = new ArrayList<>();
@@ -43,6 +31,14 @@ public class Teste {
         t1.exibe(t);
 
         System.out.println(a1.getPesoArco());
+
+    }
+    
+    public void leitura_iterativa() {
+
+    }
+
+    public void leitura_arquivo() {
 
     }
 }

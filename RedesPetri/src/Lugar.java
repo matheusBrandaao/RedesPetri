@@ -28,9 +28,9 @@ public class Lugar {
     }
 
     public void consome() {
-        marca--;
-    }
-
+        marca = marca - arco.getPesoArco();
+    }  
+    
     /*
      public boolean validaArco(Arco arco){
      int pArco = arco.getPesoArco();
